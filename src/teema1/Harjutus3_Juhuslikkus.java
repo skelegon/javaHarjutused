@@ -18,6 +18,7 @@ package teema1;
  *    Programm viskab kaks täringut mängijale ja kaks täringut endale
  *    (arvutile), arvutab mõlema mängija silmade summad ja teatab,
  *    kellel oli rohkem.
+ *
  */
 public class Harjutus3_Juhuslikkus {
     public static void main(String[] args) {

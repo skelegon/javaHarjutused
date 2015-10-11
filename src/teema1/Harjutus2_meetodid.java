@@ -6,6 +6,7 @@ package teema1;
  *    tagastab kasutaja sisestatud arvu, juhul kui see on lubatud vahemikus.
  *    Senikaua, kui kasutaja sisestab midagi ebasobivat, käseb meetod kasutajal
  *    arvu uuesti sisestada.
+ *
  */
 public class Harjutus2_meetodid {
 

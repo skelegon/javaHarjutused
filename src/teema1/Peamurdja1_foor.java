@@ -20,7 +20,6 @@ import lib.Foor;
  * Kliki punase teksti peale ja vajuta alt+enter.'
  *
  *
- *
  */
 public class Peamurdja1_foor extends Application {
     @Override

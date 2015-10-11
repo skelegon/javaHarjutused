@@ -16,8 +16,33 @@ package teema1;
  *    8 9 0 1 2 3 4 5 6 7
  *    9 0 1 2 3 4 5 6 7 8
  */
+
 public class Harjutus1_tsyklid {
     public static void main(String[] args) {
+        for (int i = 10; i >= 1; i--) {
+            System.out.print(i + " ");
+        }
 
+        System.out.println("");
+
+        for (int i = 0; i <= 10; i++) {
+            if (i%2 != 0) {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println("");
+
+        for (int i = 0; i < 10; i++) {
+            for (int j = i; j < 10; j++) {
+                System.out.print(j + " ");
+            }
+            if (i!=0) {
+                for (int k = 0; k < i; k++) {
+                    System.out.print(k + " ");
+                }
+            }
+            System.out.println();
+        }
     }
 }
+
