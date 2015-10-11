@@ -30,6 +30,7 @@ public class Harjutus2_meetodid {
     }
 
     public static int kasutajaSisestus(String kysimus, int min, int max) {
+        //Pooleli
 
         Scanner kasutaja = new Scanner(System.in);
 
@@ -49,7 +50,6 @@ public class Harjutus2_meetodid {
             }
         }
         return 0;
-
     }
 }
 
