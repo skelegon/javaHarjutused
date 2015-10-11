@@ -17,7 +17,10 @@ import lib.Foor;
  * pakub sulle, et kirjutab ise start() meetodi õigesti ära - proovi järgi.
  *
  * NB! Kui kirjutad new Foor(); siis IDE pakub sulle Foori importimise võimalust.
- * Kliki punase teksti peale ja vajuta alt+enter.
+ * Kliki punase teksti peale ja vajuta alt+enter.'
+ *
+ *
+ *
  */
 public class Peamurdja1_foor extends Application {
     @Override
