@@ -16,6 +16,7 @@ public class Harjutus2_meetodid {
 
     public static void main(String[] args) {
         System.out.println(tostaKuupi(3));
+        kasutajaSisestus(0, 100);
     }
 
     public static double tostaKuupi(int arv) {
@@ -29,27 +30,20 @@ public class Harjutus2_meetodid {
         return arv;
     }
 
-    public static int kasutajaSisestus(String kysimus, int min, int max) {
-        //Pooleli
+    public static void kasutajaSisestus(int min, int max) {
+        Scanner kasutajaSisestus = new Scanner(System.in);
 
-        Scanner kasutaja = new Scanner(System.in);
-
-        int algus = 0;
-        int lopp = 100;
-        int test = 0;
-
-        while (test == 0) {
+        while (true) {
             System.out.println("Siesta üks nr");
-            int num = kasutaja.nextInt();
+            int num = kasutajaSisestus.nextInt();
 
-            if (num > algus && num < lopp) {
+            if (num > min && num < max) {
                 System.out.println("Number on lubatud vahemikus. Valitud number on " + num);
-                test = test + 1;
+                break;
             } else {
                 System.out.println("Valitud arv ei sobi, sisesta uus nr");
             }
         }
-        return 0;
     }
 }
 
