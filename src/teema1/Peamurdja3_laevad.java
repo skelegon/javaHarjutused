@@ -17,54 +17,98 @@ import java.util.Scanner;
  */
 public class Peamurdja3_laevad {
     public static void main(String[] args) {
-        int[][] laud = new int[9][9];
+        tabel();
+    }
 
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
-                laud[i][j] = r();
+        public static void tabel() {
+            int dim = 9;
+            int laevadeArv = dim;
+            int[][] laud = new int[dim][dim];
+
+            for (int i = 0; i < dim; i++) {
+                for (int j = 0; j < dim; j++) {
+                    laud[i][j] = 0;
+                }
+            }
+
+            for (int i = 0; i < dim; i++) {
+                int a = (int) Math.floor(Math.random() * dim);
+                int b = (int) Math.floor(Math.random() * dim);
+                if (laud[a][b] == 0) {
+                    laud[a][b] = 1;
+                } else {
+                    i--;
+                }
+            }
+            for (int i = 0; i < dim; i++) {
+                System.out.println(Arrays.toString(laud[i]));
             }
         }
 
-        for (int i = 0; i < 9; i++) {
-            System.out.println(Arrays.toString(laud[i]));
-        }
-
-
-
+    public static void mang () {
         Scanner kasutaja = new Scanner(System.in);
 
-        /*while (gameover(laud)) {
-            System.out.println(Arrays.toString(laud));
-            System.out.println("Siesta üks nr");
-            int sisestus = kasutaja.nextInt();
-            int hit = laud[sisestus];
-            if (hit == 0) {
-                System.out.println("hahaa, mööda.");
-            } else if (hit == 1) {
-                System.out.println("ou fakk... pihtas");
-                laud[sisestus] = 2;
-            } else if (hit == 2) {
-                System.out.println("jou, kuule....... sa juba lasid siin põhja.");
-            }
-        }*/
-        System.out.println("Jee, võitsid (oli ka raske?)");
-    }
+        // Tuua loodud laud siia moodulisse
+        // Kuidas kontrollida, kas laual on veel laevu?
 
-    public static boolean gameover(int[] laud) {
-        for (int i = 0; i < laud.length; i++) {
-            if (laud[i] == 1) {
-                return true;
+        System.out.println("Sisesta X koordinaat");
+        int x = kasutaja.nextInt();
+        System.out.println("Sisesta Y koordinaat");
+        int y = kasutaja.nextInt();
+        if (laud[x][y] == 1) {
+            System.out.println("Pihtas!");
+            laud[x][y] = 2;
+        } else if (laud [x][y] == 0) {
+            System.out.println("Möödas!");
+            laud [x][y]=3;
+            else {
+                System.out.println("Proovisid seda lahtrit juba!");
             }
         }
-        return false;
     }
 
+    /*
+    for (int i = 0; i < dim; i++) {
+        for (int j = 0; j < dim; j++) {
+            laud[i][j] = r();
+        }
+    }
+    */
+
+
+  //  Scanner kasutaja = new Scanner(System.in);
+
+    /*while (gameover(laud)) {
+        System.out.println(Arrays.toString(laud));
+        System.out.println("Siesta üks nr");
+        int sisestus = kasutaja.nextInt();
+        int hit = laud[sisestus];
+        if (hit == 0) {
+            System.out.println("hahaa, mööda.");
+        } else if (hit == 1) {
+            System.out.println("ou fakk... pihtas");
+            laud[sisestus] = 2;
+        } else if (hit == 2) {
+            System.out.println("jou, kuule....... sa juba lasid siin põhja.");
+        }
+    }
+
+    System.out.println("Jee, võitsid (oli ka raske?)");
+}
+
+public static boolean gameover(int[] laud) {
+    for (int i = 0; i < laud.length; i++) {
+        if (laud[i] == 1) {
+            return true;
+        }
+    }
+    return false;
+}
+*/
     public static int r() {
         return (int) (Math.random() * 2);
     }
 }
-
-
 
 
 
